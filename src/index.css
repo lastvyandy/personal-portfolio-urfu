@@ -206,24 +206,47 @@ p {
   padding: 24px;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.2s, transform 0.2s;
+  gap: 16px;
+  min-width: 0;
+  transition: box-shadow 0.2s;
 }
 
 .project-card:hover {
   box-shadow: 0 8px 20px #0f172a12;
-  transform: translateY(-3px);
 }
 
 .project-card h2 {
   margin: 0;
 }
 
-.project-card .skills {
-  margin-bottom: 24px;
+.project-card p {
+  margin: 0;
 }
 
-.project-card > a, .project-card > .muted {
+.project-card .skills {
+  margin: 0;
+  align-content: start;
+}
+
+.project-card > :last-child {
   margin-top: auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@supports (grid-template-rows: subgrid) {
+  .project-card {
+    display: grid;
+    grid-row: span 5;
+    grid-template-rows: subgrid;
+    align-items: start;
+    row-gap: 16px;
+  }
+
+  .project-card > :last-child {
+    margin-top: 0;
+    align-self: start;
+  }
 }
 
 .muted {
@@ -434,17 +457,21 @@ footer a, footer a:hover {
 
 .project-image-link {
   display: block;
-  margin-bottom: 18px;
+  margin: 0;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #f1f5f9;
 }
 
 .project-image {
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: contain;
-  background: #f1f5f9;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
 }
 
 .contact-grid {
