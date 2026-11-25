@@ -206,6 +206,8 @@ p {
   padding: 24px;
   display: flex;
   flex-direction: column;
+  gap: 16px;
+  min-width: 0;
   transition: box-shadow 0.2s, transform 0.2s;
 }
 
@@ -218,12 +220,32 @@ p {
   margin: 0;
 }
 
-.project-card .skills {
-  margin-bottom: 24px;
+.project-card p {
+  margin: 0;
 }
 
-.project-card > a, .project-card > .muted {
+.project-card .skills {
+  margin: 0;
+  align-content: start;
+}
+
+.project-card > :last-child {
   margin-top: auto;
+}
+
+@supports (grid-template-rows: subgrid) {
+  .project-card {
+    display: grid;
+    grid-row: span 5;
+    grid-template-rows: subgrid;
+    align-items: start;
+    row-gap: 16px;
+  }
+
+  .project-card > :last-child {
+    margin-top: 0;
+    align-self: end;
+  }
 }
 
 .muted {
@@ -434,7 +456,8 @@ footer a, footer a:hover {
 
 .project-image-link {
   display: block;
-  margin-bottom: 18px;
+  margin: 0;
+  min-width: 0;
 }
 
 .project-image {
