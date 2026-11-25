@@ -2,6 +2,10 @@
 
 A personal portfolio website built with React for a university programming assignment. It presents my background, technical skills and software projects.
 
+## Live website
+
+[View the portfolio](https://personal-portfolio-urfu.vercel.app/)
+
 ## Technologies
 
 - React and JavaScript
