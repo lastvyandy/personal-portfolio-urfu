@@ -3,20 +3,23 @@ import ProjectCard from "../components/ProjectCard.jsx";
 const projects = [
   {
     title: "VialApp",
-    description: "An educational application that helps users prepare for driving theory exams in Chile.",
-    technologies: ["Kotlin", "Android"],
+    description: "An educational platform for Chilean driving theory exams, with practice questions, exam simulations and feedback.",
+    technologies: ["Kotlin", "Android", "Multiplatform"],
+    image: "/images/vialapp.jpg",
     url: "https://github.com/lastvyandy/VialApp",
   },
   {
     title: "Production Data & BI",
-    description: "A university research project using graph databases to connect industrial production data and trace materials.",
-    technologies: ["PostgreSQL", "Apache AGE", "Python", "Docker"],
+    description: "A university research project on industrial data integration, material traceability and business intelligence using graph databases.",
+    technologies: ["PostgreSQL", "Apache AGE", "Python", "Docker", "Apache Superset"],
+    image: "/images/production-bi.jpg",
     url: "https://github.com/lastvyandy/production-data-age",
   },
   {
-    title: "Don Pelao TaskMaster",
-    description: "An ongoing personal project for managing tasks, habits and reminders on mobile and desktop.",
+    title: "Don Pelao: TaskMaster",
+    description: "A personal productivity application with task management, reminders, progress reports and a gamified Zen garden.",
     technologies: ["Kotlin", "Compose Multiplatform"],
+    image: "/images/taskmaster.jpg",
   },
 ];
 
